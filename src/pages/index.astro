@@ -1,5 +1,5 @@
 ---
-
+import "./src/styles/global.css";
 ---
 
 <html lang="en">
@@ -11,13 +11,13 @@
       integrity="sha512-BJ/5sR2hFxQTKin/55JQCcMTObShDBAmVjL/3NR/MVcrhyOazJjAgvROem03+HYyGw16SVdSfoWCFGr9syxAKA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="/src/styles/global.css" />
+    <!-- <link rel="stylesheet" href="/src/styles/global.css" /> -->
     <title>Tech People Blog</title>
   </head>
   <body class="">
     <nav class="bg-gray-900 text-white">
       <div
-        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+        class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4"
       >
         <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
           <img src="images/logo.png" class="h-14" alt="TechPeople Logo" />
@@ -28,13 +28,13 @@
         <button
           data-collapse-toggle="navbar-default"
           type="button"
-          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+          class="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:ring-2 focus:ring-gray-200 focus:outline-none md:hidden"
           aria-controls="navbar-default"
           aria-expanded="false"
         >
           <span class="sr-only">Open main menu</span>
           <svg
-            class="w-5 h-5"
+            class="h-5 w-5"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -50,26 +50,26 @@
         </button>
         <div class="hidden w-full md:block md:w-auto" id="navbar-default">
           <ul
-            class="font-medium flex flex-col p-4 md:p-0 mt-4 border text-white rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 border-gray-700"
+            class="mt-4 flex flex-col rounded-lg border border-gray-700 p-4 font-medium text-white md:mt-0 md:flex-row md:space-x-8 md:border-0 md:p-0 rtl:space-x-reverse"
           >
             <li>
               <a
                 href="index.html"
-                class="block py-2 px-3 text-white rounded md:p-0 hover:text-indigo-400"
+                class="block rounded px-3 py-2 text-white hover:text-indigo-400 md:p-0"
                 aria-current="page">Home</a
               >
             </li>
             <li>
               <a
                 href="articles.html"
-                class="block py-2 px-3 text-white rounded md:p-0 hover:text-indigo-400"
+                class="block rounded px-3 py-2 text-white hover:text-indigo-400 md:p-0"
                 >All Articles</a
               >
             </li>
             <li>
               <a
                 href="about.html"
-                class="block py-2 px-3 text-white rounded md:p-0 hover:text-indigo-400"
+                class="block rounded px-3 py-2 text-white hover:text-indigo-400 md:p-0"
                 >About</a
               >
             </li>
@@ -78,11 +78,11 @@
       </div>
     </nav>
 
-    <section class="container mx-auto max-w-screen-xl mt-10 px-8">
+    <section class="container mx-auto mt-10 max-w-screen-xl px-8">
       <!-- Top Grid -->
       <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
         <div>
-          <h1 class="text-5xl font-bold mt-4 mb-8 leading-tight xl:text-6xl">
+          <h1 class="mt-4 mb-8 text-5xl leading-tight font-bold xl:text-6xl">
             Articles, Stories & Tutorials for Tech People
           </h1>
 
@@ -93,17 +93,17 @@
                 type="text"
                 id="query"
                 name="query"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5"
+                class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-indigo-500 focus:ring-indigo-500"
                 placeholder="Search articles..."
                 required
               />
             </div>
             <button
               type="submit"
-              class="p-2.5 ms-2 text-sm font-medium text-white bg-indigo-700 rounded-lg border border-indigo-700 hover:bg-indigo-800 focus:ring-4 focus:outline-none focus:ring-indigo-300"
+              class="ms-2 rounded-lg border border-indigo-700 bg-indigo-700 p-2.5 text-sm font-medium text-white hover:bg-indigo-800 focus:ring-4 focus:ring-indigo-300 focus:outline-none"
             >
               <svg
-                class="w-4 h-4"
+                class="h-4 w-4"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -122,32 +122,32 @@
         </div>
         <!-- Most Recent Article -->
         <div
-          class="relative inline-block w-full sm:w-auto cursor-pointer rounded-2xl"
+          class="relative inline-block w-full cursor-pointer rounded-2xl sm:w-auto"
         >
           <a href="article.html">
             <img
               src="images/image1.png"
               alt="Article Image"
-              class="w-full h-auto rounded-2xl"
+              class="h-auto w-full rounded-2xl"
             />
 
             <div
-              class="absolute inset-0 flex flex-col items-center justify-center bg-black opacity-80 hover:opacity-75 transition duration-300 ease-in-out text-white text-center rounded-2xl"
+              class="absolute inset-0 flex flex-col items-center justify-center rounded-2xl bg-black text-center text-white opacity-80 transition duration-300 ease-in-out hover:opacity-75"
             >
               <div>
                 <h2 class="text-2xl font-semibold sm:text-3xl">
                   The best laptops for developers in 2024
                 </h2>
-                <p class="text-xl mt-4">January 20, 2024</p>
+                <p class="mt-4 text-xl">January 20, 2024</p>
 
                 <!-- Tags with rounded border -->
-                <div class="flex mt-4 justify-center">
+                <div class="mt-4 flex justify-center">
                   <span
-                    class="px-2 py-1 border text-white rounded-full text-xs mr-2"
+                    class="mr-2 rounded-full border px-2 py-1 text-xs text-white"
                     >Tech</span
                   >
                   <span
-                    class="px-2 py-1 border text-white rounded-full text-xs mr-2"
+                    class="mr-2 rounded-full border px-2 py-1 text-xs text-white"
                     >Hardware</span
                   >
                 </div>
@@ -160,29 +160,29 @@
       <!-- Main Grid -->
       <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         <!-- Article Card -->
-        <div class="max-w-md mx-auto mt-10">
-          <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+        <div class="mx-auto mt-10 max-w-md">
+          <div class="overflow-hidden rounded-lg bg-white shadow-lg">
             <a href="article.html">
               <img
                 src="images/image2.png"
                 alt="Article Image"
-                class="w-full h-48 object-cover hover:opacity-75 transition duration-300 ease-in-out"
+                class="h-48 w-full object-cover transition duration-300 ease-in-out hover:opacity-75"
               />
             </a>
             <div class="p-6">
-              <h2 class="text-2xl font-semibold mb-2">
+              <h2 class="mb-2 text-2xl font-semibold">
                 <a href="article.html">
                   Guardian of the Digital Realm: Web Security
                 </a>
               </h2>
-              <p class="text-gray-600 text-sm mb-4">January 19, 2024</p>
+              <p class="mb-4 text-sm text-gray-600">January 19, 2024</p>
               <div class="flex flex-wrap gap-2">
                 <span
-                  class="px-2 py-1 bg-blue-500 text-white rounded-full text-xs hover:opacity-90"
+                  class="rounded-full bg-blue-500 px-2 py-1 text-xs text-white hover:opacity-90"
                   ><a href="">Code</a></span
                 >
                 <span
-                  class="px-2 py-1 bg-purple-500 text-white rounded-full text-xs hover:opacity-90"
+                  class="rounded-full bg-purple-500 px-2 py-1 text-xs text-white hover:opacity-90"
                   ><a href="#">Software</a></span
                 >
               </div>
@@ -191,29 +191,29 @@
         </div>
 
         <!-- Article Card -->
-        <div class="max-w-md mx-auto mt-10">
-          <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+        <div class="mx-auto mt-10 max-w-md">
+          <div class="overflow-hidden rounded-lg bg-white shadow-lg">
             <a href="article.html">
               <img
                 src="images/image3.png"
                 alt="Article Image"
-                class="w-full h-48 object-cover hover:opacity-75 transition duration-300 ease-in-out"
+                class="h-48 w-full object-cover transition duration-300 ease-in-out hover:opacity-75"
               />
             </a>
             <div class="p-6">
-              <h2 class="text-2xl font-semibold mb-2">
+              <h2 class="mb-2 text-2xl font-semibold">
                 <a href="article.html">
                   Immerse in the Virtual World: VR Development
                 </a>
               </h2>
-              <p class="text-gray-600 text-sm mb-4">January 18, 2024</p>
+              <p class="mb-4 text-sm text-gray-600">January 18, 2024</p>
               <div class="flex flex-wrap gap-2">
                 <span
-                  class="px-2 py-1 bg-blue-500 text-white rounded-full text-xs hover:opacity-90"
+                  class="rounded-full bg-blue-500 px-2 py-1 text-xs text-white hover:opacity-90"
                   ><a href="">VR</a></span
                 >
                 <span
-                  class="px-2 py-1 bg-purple-500 text-white rounded-full text-xs hover:opacity-90"
+                  class="rounded-full bg-purple-500 px-2 py-1 text-xs text-white hover:opacity-90"
                   ><a href="#">Tech</a></span
                 >
               </div>
@@ -222,29 +222,29 @@
         </div>
 
         <!-- Article Card -->
-        <div class="max-w-md mx-auto mt-10">
-          <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+        <div class="mx-auto mt-10 max-w-md">
+          <div class="overflow-hidden rounded-lg bg-white shadow-lg">
             <a href="article.html">
               <img
                 src="images/image4.png"
                 alt="Article Image"
-                class="w-full h-48 object-cover hover:opacity-75 transition duration-300 ease-in-out"
+                class="h-48 w-full object-cover transition duration-300 ease-in-out hover:opacity-75"
               />
             </a>
             <div class="p-6">
-              <h2 class="text-2xl font-semibold mb-2">
+              <h2 class="mb-2 text-2xl font-semibold">
                 <a href="article.html">
                   Elevate Your Mobile Experience with Samsung
                 </a>
               </h2>
-              <p class="text-gray-600 text-sm mb-4">January 17, 2024</p>
+              <p class="mb-4 text-sm text-gray-600">January 17, 2024</p>
               <div class="flex flex-wrap gap-2">
                 <span
-                  class="px-2 py-1 bg-blue-500 text-white rounded-full text-xs hover:opacity-90"
+                  class="rounded-full bg-blue-500 px-2 py-1 text-xs text-white hover:opacity-90"
                   ><a href="">Smartphones</a></span
                 >
                 <span
-                  class="px-2 py-1 bg-purple-500 text-white rounded-full text-xs hover:opacity-90"
+                  class="rounded-full bg-purple-500 px-2 py-1 text-xs text-white hover:opacity-90"
                   ><a href="#">Samsung</a></span
                 >
               </div>
@@ -253,29 +253,29 @@
         </div>
 
         <!-- Article Card -->
-        <div class="max-w-md mx-auto mt-10">
-          <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+        <div class="mx-auto mt-10 max-w-md">
+          <div class="overflow-hidden rounded-lg bg-white shadow-lg">
             <a href="article.html">
               <img
                 src="images/image5.png"
                 alt="Article Image"
-                class="w-full h-48 object-cover hover:opacity-75 transition duration-300 ease-in-out"
+                class="h-48 w-full object-cover transition duration-300 ease-in-out hover:opacity-75"
               />
             </a>
             <div class="p-6">
-              <h2 class="text-2xl font-semibold mb-2">
+              <h2 class="mb-2 text-2xl font-semibold">
                 <a href="article.html">
                   Soaring to New Heights: The World of Drones</a
                 >
               </h2>
-              <p class="text-gray-600 text-sm mb-4">January 16, 2024</p>
+              <p class="mb-4 text-sm text-gray-600">January 16, 2024</p>
               <div class="flex flex-wrap gap-2">
                 <span
-                  class="px-2 py-1 bg-blue-500 text-white rounded-full text-xs hover:opacity-90"
+                  class="rounded-full bg-blue-500 px-2 py-1 text-xs text-white hover:opacity-90"
                   ><a href="">Drones</a></span
                 >
                 <span
-                  class="px-2 py-1 bg-purple-500 text-white rounded-full text-xs hover:opacity-90"
+                  class="rounded-full bg-purple-500 px-2 py-1 text-xs text-white hover:opacity-90"
                   ><a href="#">Tech</a></span
                 >
               </div>
@@ -284,29 +284,29 @@
         </div>
 
         <!-- Article Card -->
-        <div class="max-w-md mx-auto mt-10">
-          <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+        <div class="mx-auto mt-10 max-w-md">
+          <div class="overflow-hidden rounded-lg bg-white shadow-lg">
             <a href="article.html">
               <img
                 src="images/image6.png"
                 alt="Article Image"
-                class="w-full h-48 object-cover hover:opacity-75 transition duration-300 ease-in-out"
+                class="h-48 w-full object-cover transition duration-300 ease-in-out hover:opacity-75"
               />
             </a>
             <div class="p-6">
-              <h2 class="text-2xl font-semibold mb-2">
+              <h2 class="mb-2 text-2xl font-semibold">
                 <a href="article.html">
                   Capturing Life's Moments with Canon Excellence</a
                 >
               </h2>
-              <p class="text-gray-600 text-sm mb-4">January 14, 2024</p>
+              <p class="mb-4 text-sm text-gray-600">January 14, 2024</p>
               <div class="flex flex-wrap gap-2">
                 <span
-                  class="px-2 py-1 bg-blue-500 text-white rounded-full text-xs hover:opacity-90"
+                  class="rounded-full bg-blue-500 px-2 py-1 text-xs text-white hover:opacity-90"
                   ><a href="">Cameras</a></span
                 >
                 <span
-                  class="px-2 py-1 bg-purple-500 text-white rounded-full text-xs hover:opacity-90"
+                  class="rounded-full bg-purple-500 px-2 py-1 text-xs text-white hover:opacity-90"
                   ><a href="#">Gadgets</a></span
                 >
               </div>
@@ -315,29 +315,29 @@
         </div>
 
         <!-- Article Card -->
-        <div class="max-w-md mx-auto mt-10">
-          <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+        <div class="mx-auto mt-10 max-w-md">
+          <div class="overflow-hidden rounded-lg bg-white shadow-lg">
             <a href="article.html">
               <img
                 src="images/image7.png"
                 alt="Article Image"
-                class="w-full h-48 object-cover hover:opacity-75 transition duration-300 ease-in-out"
+                class="h-48 w-full object-cover transition duration-300 ease-in-out hover:opacity-75"
               />
             </a>
             <div class="p-6">
-              <h2 class="text-2xl font-semibold mb-2">
+              <h2 class="mb-2 text-2xl font-semibold">
                 <a href="article.html">
                   Unleash Creativity With These Cutting-Edge Tablets</a
                 >
               </h2>
-              <p class="text-gray-600 text-sm mb-4">January 13, 2024</p>
+              <p class="mb-4 text-sm text-gray-600">January 13, 2024</p>
               <div class="flex flex-wrap gap-2">
                 <span
-                  class="px-2 py-1 bg-blue-500 text-white rounded-full text-xs hover:opacity-90"
+                  class="rounded-full bg-blue-500 px-2 py-1 text-xs text-white hover:opacity-90"
                   ><a href="">Gadgets</a></span
                 >
                 <span
-                  class="px-2 py-1 bg-purple-500 text-white rounded-full text-xs hover:opacity-90"
+                  class="rounded-full bg-purple-500 px-2 py-1 text-xs text-white hover:opacity-90"
                   ><a href="#">Tablets</a></span
                 >
               </div>
@@ -351,16 +351,16 @@
       <div class="container mx-auto mt-10 max-w-screen-xl px-8">
         <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
           <div class="mt-10">
-            <h3 class="text-xl font-semibold mb-4">About</h3>
-            <p class="text-white text-sm">
+            <h3 class="mb-4 text-xl font-semibold">About</h3>
+            <p class="text-sm text-white">
               TechPeople is a blog for tech enthusiasts. We publish articles,
               stories and tutorials about the latest technology trends and
               advancements.
             </p>
           </div>
           <div class="mt-10">
-            <h3 class="text-xl font-semibold mb-4">Categories</h3>
-            <ul class="text-white text-sm">
+            <h3 class="mb-4 text-xl font-semibold">Categories</h3>
+            <ul class="text-sm text-white">
               <li class="mb-2">
                 <a href="#">Tech</a>
               </li>
@@ -391,8 +391,8 @@
             </ul>
           </div>
           <div class="mt-10">
-            <h3 class="text-xl font-semibold mb-4">Contact</h3>
-            <ul class="text-white text-sm">
+            <h3 class="mb-4 text-xl font-semibold">Contact</h3>
+            <ul class="text-sm text-white">
               <li class="mb-2">
                 <a href="#">Email</a>
               </li>
