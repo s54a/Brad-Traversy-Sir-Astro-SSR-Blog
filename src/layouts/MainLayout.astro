@@ -1,11 +1,15 @@
 ---
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 import "./src/styles/global.css";
-import { Image } from "astro:assets";
-import Logo from "../images/logo.png";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../pages/constants";
 
 // const title = Astro.props.title ? Astro.props.title : "Tech People Blog";
 const { title = "Articles, Stories & Tutorials For Tech People" } = Astro.props;
+
+interface Props {
+  title?: string;
+}
 ---
 
 <html lang="en">
@@ -23,135 +27,12 @@ const { title = "Articles, Stories & Tutorials For Tech People" } = Astro.props;
     <title>{SITE_TITLE} - {title}</title>
   </head>
   <body class="">
-    <nav class="bg-gray-900 text-white">
-      <div
-        class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4"
-      >
-        <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-          <Image src={Logo} width={55} height={55} alt="TechPeople Logo" />
-          <span class="self-center text-2xl font-semibold whitespace-nowrap">
-            <span class="text-indigo-400">Tech</span>People
-          </span>
-        </a>
-        <button
-          data-collapse-toggle="navbar-default"
-          type="button"
-          class="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:ring-2 focus:ring-gray-200 focus:outline-none md:hidden"
-          aria-controls="navbar-default"
-          aria-expanded="false"
-        >
-          <span class="sr-only">Open main menu</span>
-          <svg
-            class="h-5 w-5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 17 14"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M1 1h15M1 7h15M1 13h15"></path>
-          </svg>
-        </button>
-        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul
-            class="mt-4 flex flex-col rounded-lg border border-gray-700 p-4 font-medium text-white md:mt-0 md:flex-row md:space-x-8 md:border-0 md:p-0 rtl:space-x-reverse"
-          >
-            <li>
-              <a
-                href="/"
-                class="block rounded px-3 py-2 text-white hover:text-indigo-400 md:p-0"
-                aria-current="page">Home</a
-              >
-            </li>
-            <li>
-              <a
-                href="/articles"
-                class="block rounded px-3 py-2 text-white hover:text-indigo-400 md:p-0"
-                >All Articles</a
-              >
-            </li>
-            <li>
-              <a
-                href="/about"
-                class="block rounded px-3 py-2 text-white hover:text-indigo-400 md:p-0"
-                >About</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <Navbar />
 
     <section class="container mx-auto mt-10 max-w-screen-xl px-8">
       <slot />
     </section>
 
-    <footer class="bg-indigo-900 text-white">
-      <div class="container mx-auto mt-10 max-w-screen-xl px-8">
-        <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
-          <div class="mt-10">
-            <h3 class="mb-4 text-xl font-semibold">About</h3>
-            <p class="text-sm text-white">
-              TechPeople is a blog for tech enthusiasts. We publish articles,
-              stories and tutorials about the latest technology trends and
-              advancements.
-            </p>
-          </div>
-          <div class="mt-10">
-            <h3 class="mb-4 text-xl font-semibold">Categories</h3>
-            <ul class="text-sm text-white">
-              <li class="mb-2">
-                <a href="#">Tech</a>
-              </li>
-              <li class="mb-2">
-                <a href="#">Programming</a>
-              </li>
-              <li class="mb-2">
-                <a href="#">Gadgets</a>
-              </li>
-              <li class="mb-2">
-                <a href="#">Hardware</a>
-              </li>
-              <li class="mb-2">
-                <a href="#">Software</a>
-              </li>
-              <li class="mb-2">
-                <a href="#">VR</a>
-              </li>
-              <li class="mb-2">
-                <a href="#">Smartphones</a>
-              </li>
-              <li class="mb-2">
-                <a href="#">Cameras</a>
-              </li>
-              <li class="mb-2">
-                <a href="#">Drones</a>
-              </li>
-            </ul>
-          </div>
-          <div class="mt-10">
-            <h3 class="mb-4 text-xl font-semibold">Contact</h3>
-            <ul class="text-sm text-white">
-              <li class="mb-2">
-                <a href="#">Email</a>
-              </li>
-              <li class="mb-2">
-                <a href="#">Twitter</a>
-              </li>
-              <li class="mb-2">
-                <a href="#">Facebook</a>
-              </li>
-              <li class="mb-2">
-                <a href="#">Instagram</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <Footer />
   </body>
 </html>
