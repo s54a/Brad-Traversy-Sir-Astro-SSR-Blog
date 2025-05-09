@@ -1,5 +1,7 @@
 ---
 import "./src/styles/global.css";
+import { Image } from "astro:assets";
+import Logo from "../images/logo.png";
 ---
 
 <html lang="en">
@@ -20,7 +22,7 @@ import "./src/styles/global.css";
         class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4"
       >
         <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="images/logo.png" class="h-14" alt="TechPeople Logo" />
+          <Image src={Logo} width={55} height={55} alt="TechPeople Logo" />
           <span class="self-center text-2xl font-semibold whitespace-nowrap">
             <span class="text-indigo-400">Tech</span>People
           </span>
