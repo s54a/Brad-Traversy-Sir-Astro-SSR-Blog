@@ -2,6 +2,9 @@
 import "./src/styles/global.css";
 import { Image } from "astro:assets";
 import Logo from "../images/logo.png";
+
+// const title = Astro.props.title ? Astro.props.title : "Tech People Blog";
+const { title = "Articles, Stories & Tutorials For Tech People" } = Astro.props;
 ---
 
 <html lang="en">
@@ -15,7 +18,7 @@ import Logo from "../images/logo.png";
       crossorigin="anonymous"
       referrerpolicy="no-referrer"></script>
     <!-- <link rel="stylesheet" href="/src/styles/global.css" /> -->
-    <title>Tech People Blog</title>
+    <title>{title}</title>
   </head>
   <body class="">
     <nav class="bg-gray-900 text-white">
