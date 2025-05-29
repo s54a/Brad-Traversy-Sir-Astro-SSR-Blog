@@ -1,6 +1,6 @@
 ---
-import { Image } from "astro:assets";
-import Logo from "../images/logo.webp";
+// import { Image } from "astro:assets";
+// import Logo from "../images/logo.webp";
 ---
 
 <nav class="bg-gray-900 text-white">
@@ -8,7 +8,13 @@ import Logo from "../images/logo.webp";
     class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4"
   >
     <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-      <Image src={Logo} width={55} height={55} alt="TechPeople Logo" />
+      <!-- <Image src={Logo} width={55} height={55} alt="TechPeople Logo" /> -->
+      <img
+        src="/images/logo.webp"
+        alt="TechPeople Logo"
+        height="55"
+        width="55"
+      />
       <span class="self-center text-2xl font-semibold whitespace-nowrap">
         <span class="text-indigo-400">Tech</span>People
       </span>
