@@ -1,5 +1,5 @@
 ---
-import { formatData } from "../utils";
+import { formatDate } from "../utils";
 import type { CollectionEntry } from "astro:content";
 
 const { article } = Astro.props;
@@ -23,7 +23,7 @@ interface Props {
         <a href={"/article/" + article.slug}>{article.data.title}</a>
       </h2>
       <p class="mb-4 text-sm text-gray-600">
-        {formatData(article.data.pubDate)}
+        {formatDate(article.data.pubDate)}
       </p>
       <div class="flex flex-wrap gap-2">
         {

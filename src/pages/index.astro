@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import SearchForm from "../components/SearchForm.astro";
+import MostRecentArticle from "../components/MostRecentArticle.astro";
 import { HOMEPAGE_ARTICLE_LIMIT } from "./constants";
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
@@ -30,40 +31,7 @@ const otherArticles: CollectionEntry<"blog">[] = allBlogArticles.slice(1);
     </div>
 
     <!-- Most Recent Article -->
-    <div
-      class="relative inline-block w-full cursor-pointer rounded-2xl sm:w-auto"
-    >
-      <a href="article.html">
-        <img
-          src="images/image1.webp"
-          alt="Article Image"
-          class="h-auto w-full rounded-2xl"
-        />
-
-        <div
-          class="absolute inset-0 flex flex-col items-center justify-center rounded-2xl bg-black text-center text-white opacity-80 transition duration-300 ease-in-out hover:opacity-75"
-        >
-          <div>
-            <h2 class="text-2xl font-semibold sm:text-3xl">
-              The best laptops for developers in 2024
-            </h2>
-            <p class="mt-4 text-xl">January 20, 2024</p>
-
-            <!-- Tags with rounded border -->
-            <div class="mt-4 flex justify-center">
-              <span
-                class="mr-2 rounded-full border px-2 py-1 text-xs text-white"
-                >Tech</span
-              >
-              <span
-                class="mr-2 rounded-full border px-2 py-1 text-xs text-white"
-                >Hardware</span
-              >
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
+    <MostRecentArticle article={getMostRecentArticle} />
   </div>
 
   <!-- Main Grid -->
