@@ -2,6 +2,7 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 import { getEntry } from "astro:content";
 import { formatDate } from "../../utils";
+import Tags from "../../components/Tags.astro";
 
 const { slug } = Astro.params;
 
@@ -32,27 +33,13 @@ const { Content } = await entry.render();
     <h3 class="mb-2 text-lg">
       Written by {entry.data.author} on {formatDate(entry.data.pubDate)}
     </h3>
-    <div class="mb-6 flex flex-wrap gap-2">
-      {
-        entry.data.tags.map((tag: string, index: number) => {
-          return (
-            <span
-              class={
-                index % 2 === 0
-                  ? "rounded-full bg-blue-500 px-2 py-1 text-xs text-white hover:opacity-90"
-                  : "rounded-full bg-indigo-500 px-2 py-1 text-xs text-white hover:opacity-90"
-              }
-            >
-              <a href={"/articles/tag/" + tag}>{tag}</a>
-            </span>
-          );
-        })
-      }
-    </div>
+
+    <Tags tags={entry.data.tags} />
+
     <img
       src={"/images/" + entry.data.image}
       alt="Article Image"
-      class="mb-6 h-auto w-full rounded-xl"
+      class="my-6 h-auto w-full rounded-xl"
     />
 
     <Content />
